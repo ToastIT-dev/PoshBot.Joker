@@ -14,7 +14,7 @@ Describe 'PoshBot.Joker Module' {
             (Get-Module PoshBot.Joker).ModuleType | Should -Be 'Script'
         }
 
-        It 'should export two functions' {
+        It 'should export one function' {
             (Get-Command -Module PoshBot.Joker).Count | Should -Be 1
         }
     }
