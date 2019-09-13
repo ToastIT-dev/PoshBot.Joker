@@ -43,7 +43,7 @@ if ($Compile.IsPresent) {
 
     $Public | Get-Content | Add-Content "$BasePath\$Module\$Module.psm1"
 
-    "`$PublicFunctions = '$($Public.BaseName -join "', '")'" | Add-Content "$BasePath\$Module\$Module.psm1"
+    "Export-ModuleMember -Function '$($Public.BaseName -join "', '")'" | Add-Content "$BasePath\$Module\$Module.psm1"
 }
 
 # Test step
