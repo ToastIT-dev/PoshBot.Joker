@@ -6,6 +6,11 @@ param(
 
 # Publish step
 if ($Publish.IsPresent) {
+    if (-not (Get-Module -Name PoshBot -ListAvailable)) {
+        Write-Warning "Module 'PoshBot' is missing or out of date. Installing 'PoshBot' ..."
+        Install-Module -Name PoshBot -Scope CurrentUser -Force
+    }
+
     # Publish Module to PowerShell Gallery
     Try {
         $Splat = @{
