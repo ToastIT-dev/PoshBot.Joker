@@ -48,4 +48,4 @@ jobs:
     displayName: 'Publish compiled module artifact'
     inputs:
       artifactName: 'PoshBot.Joker'
-      targetPath: .\src\PoshBot.Joker
+      targetPath: .\PoshBot.Joker
