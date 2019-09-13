@@ -1,5 +1,5 @@
 function Get-Joke {
-    #[PoshBot.BotCommand(CommandName = 'joke')]
+    [PoshBot.BotCommand(CommandName = 'joke')]
     [CmdletBinding(DefaultParameterSetName = 'Specific')]
     param (
         [Parameter(Position = 0,
