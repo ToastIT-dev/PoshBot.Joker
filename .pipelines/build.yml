@@ -49,3 +49,9 @@ jobs:
     inputs:
       artifactName: 'PoshBot.Joker'
       targetPath: .\PoshBot.Joker
+
+  - task: PublishPipelineArtifact@0
+    displayName: 'Publish meta scripts'
+    inputs:
+      artifactName: '_Scripts'
+      targetPath: .\.pipelines
