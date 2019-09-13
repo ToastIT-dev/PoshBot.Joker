@@ -10,19 +10,19 @@ function Get-Joke {
         Randomly selects a genre of joke to be retrieved.
     .EXAMPLE
         !joke
-        
+
         Gets a random dad joke via default genre.
     .EXAMPLE
         !joke 'Dad'
-        
+
         Gets a random dad joke by explictly selecting that genre.
     .EXAMPLE
         !joke -Genre 'Geek'
-        
+
         Gets a random geek / programmer joke specifying the optional '-Genre' identifier.
     .EXAMPLE
         !joke -Random
-        
+
         Gets a random joke from a random genre.
     #>
     [PoshBot.BotCommand(CommandName = 'joke')]
