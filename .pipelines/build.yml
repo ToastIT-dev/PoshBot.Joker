@@ -7,7 +7,7 @@ trigger:
     - /src/*
 
 jobs:
-- job: PoshBot.Joker_Test_Build
+- job: PoshBot_Joker_Test_Build
   displayName: 'Test & Build'
   pool:
     vmImage: 'windows-2019'
