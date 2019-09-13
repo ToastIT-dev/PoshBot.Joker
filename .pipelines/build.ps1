@@ -53,6 +53,11 @@ if($Test.IsPresent) {
         Install-Module -Name Pester -Scope CurrentUser -Force
     }
 
+    if (-not (Get-Module -Name PoshBot -ListAvailable)) {
+        Write-Warning "Module 'PoshBot' is missing or out of date. Installing 'PoshBot' ..."
+        Install-Module -Name PoshBot -Scope CurrentUser -Force
+    }
+
     $Result = Invoke-Pester "$BasePath\test" -OutputFormat NUnitXml -OutputFile TestResults.xml -PassThru
 
     if ($Result.FailedCount -gt 0) {
