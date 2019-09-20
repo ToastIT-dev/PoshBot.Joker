@@ -6,52 +6,15 @@ trigger:
     include:
     - /src/*
 
+resources:
+  repositories:
+    - repository: CentralPipeline
+      type: github
+      name: ToastIT-dev/CentralPipeline
+
 jobs:
-- job: PoshBot_Joker_Test_Build
-  displayName: 'Test & Build'
-  pool:
-    vmImage: 'windows-2019'
-  steps:
-
-  - task: PowerShell@2
-    displayName: 'Run PowerShell Script Analyzer'
-    inputs:
-      targetType: Inline
-      script: .\.pipelines\build.ps1 -Analyze -BasePath '.\src'
-
-  - task: PowerShell@2
-    displayName: 'Run Pester tests (individual .ps1 files)'
-    inputs:
-      targetType: Inline
-      script: .\.pipelines\build.ps1 -Test -BasePath '.'
-
-  - task: PowerShell@2
-    displayName: 'Compile module'
-    inputs:
-      targetType: Inline
-      script: .\.pipelines\build.ps1 -Compile -BasePath '.' -Module 'PoshBot.Joker'
-
-  - task: PowerShell@2
-    displayName: 'Run Pester tests (compiled .psm1)'
-    inputs:
-      targetType: Inline
-      script: .\.pipelines\build.ps1 -Test -BasePath '.'
-
-  - task: PublishTestResults@2
-    displayName: 'Publish test results'
-    inputs:
-      testRunner: NUnit
-      testResultsFiles: '**/TestResults.xml'
-    condition: succeededOrFailed()
-
-  - task: PublishPipelineArtifact@0
-    displayName: 'Publish compiled module artifact'
-    inputs:
-      artifactName: 'PoshBot.Joker'
-      targetPath: .\PoshBot.Joker
-
-  - task: PublishPipelineArtifact@0
-    displayName: 'Publish meta scripts'
-    inputs:
-      artifactName: '_Scripts'
-      targetPath: .\.pipelines
+- template: standard-build-template.yaml@CentralPipeline
+  parameters:
+    VmImage: windows-2019
+    Module: PoshBot.Joker
+    JobName: PoshBot_Joker_Test_Build
