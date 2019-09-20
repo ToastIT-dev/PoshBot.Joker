@@ -11,6 +11,7 @@ resources:
     - repository: CentralPipeline
       type: github
       name: ToastIT-dev/CentralPipeline
+      endpoint: https://github.com/ToastIT-dev/CentralPipeline.git
 
 jobs:
 - template: standard-build-template.yaml@CentralPipeline
