@@ -30,7 +30,7 @@ function Get-Joke {
     param (
         [Parameter(Position = 0,
                    ParameterSetName = 'Specific')]
-        [ValidateSet('Dad', 'Geek', 'Fortune', 'ChuckNorris')]
+        [ValidateSet('Dad', 'Geek', 'Fortune', 'ChuckNorris', 'RonSwanson', 'CorpBuzzword', 'Advice')]
         [string] $Genre = 'Dad',
 
         [Parameter(Mandatory,
@@ -46,6 +46,9 @@ function Get-Joke {
         Dad { Get-DadJoke }
         Geek { Get-GeekJoke }
         Fortune { Get-Fortune }
-        ChuckNorris {Get-CNorrisJoke}
+        ChuckNorris {Get-CNorrisJoke }
+        RonSwanson { Get-RSwansonQuote }
+        CorpBuzzword { Get-CorpBuzzword }
+        Advice { Get-Advice }
     }
 }
