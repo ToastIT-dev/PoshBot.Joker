@@ -51,6 +51,6 @@ function Get-Joke {
         CorpBuzzword { Get-CorpBuzzword }
         Advice { Get-Advice }
         Programming {Get-ProgrammingJoke}
-        General {Get-GeneralJoke}
+        Random {Get-GeneralJoke}
     }
 }
