@@ -1,4 +1,4 @@
-Function Get-RandomJoke{
+Function Get-GeneralJoke{
     $Header = @{'Accept' = 'application/json'}
 
  $joke = (Invoke-RestMethod -Method Get -Uri 'https://official-joke-api.appspot.com/random_joke' -Headers $Header -UseBasicParsing)
