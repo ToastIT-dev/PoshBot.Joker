@@ -1,6 +1,6 @@
 function Get-GeekJoke {
     do {
-    $Joke = Invoke-RestMethod -Uri 'https://sv443.net/jokeapi/category/Programming?blacklistFlags=nsfw,religious,political' -UseBasicParsing
+    $Joke = Invoke-RestMethod -Uri 'https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,religious,political' -UseBasicParsing
     } while ($Joke.setup -like '*God*' -or $Joke.setup -like '*sex*' -or $Joke.joke -like '*sex*' -or $Joke.setup -like '*Gender*' -or $Joke.joke -like '*snuts*')
 
     if ($Joke.type -eq 'single') {
