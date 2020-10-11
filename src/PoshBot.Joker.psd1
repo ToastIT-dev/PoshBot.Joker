@@ -1,6 +1,6 @@
 @{
     RootModule        = 'PoshBot.Joker.psm1'
-    ModuleVersion     = '0.0.2'
+    ModuleVersion     = '0.0.3'
     GUID              = '76c6ca86-11f0-4e5e-b484-9289adf3c210'
     Author            = 'Josh (Windos) King'
     CompanyName       = 'ToastIT.dev'
@@ -17,9 +17,13 @@
             LicenseUri   = 'https://github.com/ToastIT-dev/PoshBot.Joker/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/ToastIT-dev/PoshBot.Joker'
             IconUri      = 'https://raw.githubusercontent.com/ToastIT-dev/PoshBot.Joker/master/Media/jester.png'
-            ReleaseNotes = '# 0.0.1
+            ReleaseNotes = '# 0.0.3
 
-* Add Chuck Norris jokes (thanks @Saggiehaim!)
+* Updated geek jokes API (thanks @SaggieHaim!)
+
+# 0.0.1
+
+* Add Chuck Norris jokes (thanks @SaggieHaim!)
 * Add Ron Swanson quotes, Corporate Buzzwords, and Advice Slips (thanks @jhoughes!)
 '
         }
