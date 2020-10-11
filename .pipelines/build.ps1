@@ -50,7 +50,7 @@ if ($Compile.IsPresent) {
 if($Test.IsPresent) {
     if (-not (Get-Module -Name Pester -ListAvailable) -or (Get-Module -Name Pester -ListAvailable)[0].Version -eq [Version]'3.4.0') {
         Write-Warning "Module 'Pester' is missing or out of date. Installing 'Pester' ..."
-        Install-Module -Name Pester -Scope CurrentUser -Force
+        Install-Module -Name Pester -Scope CurrentUser -Force -RequiredVersion 4.10.1 -SkipPublisherCheck
     }
 
     if (-not (Get-Module -Name PoshBot -ListAvailable)) {
