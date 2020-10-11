@@ -52,7 +52,9 @@ if($Test.IsPresent) {
         Write-Warning "Module 'Pester' is missing or out of date. Installing 'Pester' ..."
         Install-Module -Name Pester -Scope CurrentUser -Force -RequiredVersion 4.10.1 -SkipPublisherCheck
 
-        Remove-Module -Name Pester
+        if (Get-Module -Name Pester) {
+            Remove-Module -Name Pester -ErrorAction SilentlyContinue
+        }
         Import-Module -Name Pester -RequiredVersion 4.10.1
     }
 
