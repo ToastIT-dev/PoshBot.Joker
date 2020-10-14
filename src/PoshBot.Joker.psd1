@@ -1,6 +1,6 @@
 @{
     RootModule        = 'PoshBot.Joker.psm1'
-    ModuleVersion     = '0.0.3'
+    ModuleVersion     = '0.0.4'
     GUID              = '76c6ca86-11f0-4e5e-b484-9289adf3c210'
     Author            = 'Josh (Windos) King'
     CompanyName       = 'ToastIT.dev'
@@ -17,7 +17,11 @@
             LicenseUri   = 'https://github.com/ToastIT-dev/PoshBot.Joker/blob/master/LICENSE'
             ProjectUri   = 'https://github.com/ToastIT-dev/PoshBot.Joker'
             IconUri      = 'https://raw.githubusercontent.com/ToastIT-dev/PoshBot.Joker/master/Media/jester.png'
-            ReleaseNotes = '# 0.0.3
+            ReleaseNotes = '# 0.0.4
+
+* Added Seinfeld quotes (thanks @anthonyjvoss!)
+
+# 0.0.3
 
 * Updated geek jokes API (thanks @SaggieHaim!)
 
